@@ -35,7 +35,8 @@ CREATE TABLE categori_product(
     id INT,
     nama VARCHAR(64),
     description VARCHAR(128) NOT NULL,
-    create_data VARCHAR(64) DEFAULT 'admin'
+    create_data VARCHAR(64) DEFAULT 'admin',
+    PRIMARY KEY (id)
 );
 
 -- untuk melihat detail TABLE
@@ -58,7 +59,7 @@ INSERT INTO categori_product(id, name)VALUES(100, 'pakaian');
 SELECT * FROM categori_product ORDER BY id asc;
 
 -- untuk memilih / filter bisa menggukan WREHE
-DELETE FROM categori_product WHERE id = 3;
+DELETE FROM categori_product WHERE id < 3;
 SELECT * FROM categori_product WHERE id = 100;
 
 
@@ -69,5 +70,7 @@ DELETE FROM [nama_table] WHERE id = 3;
 
 -- untuk mengupdate record / data menggunakan perinta query
 UPDATE categori_product SET nama = 'assesories', WHERE id = 3;
-UPDATE categori_product SET nama = 'perhiasan', description = 'data perhiasan', create_data = 'budi' WHERE id = 3;
 
+2.a 
+UPDATE categori_product SET nama = 'perhiasan', description = 'data perhiasan', create_data = 'budi' WHERE id = 3;
+DELETE FROM 
